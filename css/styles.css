@@ -1,60 +1,87 @@
-body {
-  background-image: url(../img/dark\ codex.png);
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-body .madimi-one-regular {
-  font-family: "Madimi One", sans-serif;
-  position: relative;
+
+body {
+  background-image: url(/img/dark\ codex.png);
+}
+body .chango-regular {
+  font-family: "Chango", sans-serif;
+  font-style: normal;
 }
 
-.nav-bar {
+.main-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-}
-.nav-bar .header-title {
-  color: #f28123;
-  font-size: 38px;
-}
-.nav-bar img {
-  height: 180px;
-  width: 180px;
-}
-.nav-bar .menu-buttons {
-  display: flex;
-  flex-direction: column;
-}
-.nav-bar .button-action {
-  font-family: "Madimi One", sans-serif;
-  color: #f28123;
-  border: solid 3px #9fbbcc;
-  background: none;
-  border-radius: 25px;
-  box-shadow: 0px 3px 1px 1px #fff600;
-  margin: 20px;
-  font-size: 30px;
-}
-.nav-bar .button-action:hover {
-  cursor: pointer;
-  background-image: url(/img/aztec-women_orig.jpg);
-}
-
-.main-footer .landin-page-footer {
-  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #010b16;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
 }
-.main-footer .landin-page-footer .deliveroo {
-  width: 100px;
-  height: 100px;
+.main-nav .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.main-footer .landin-page-footer .social {
+.main-nav .links-container {
+  align-items: center;
+}
+.main-nav .main-title {
+  font-family: "Chango", sans-serif;
   color: #f28123;
-  font-size: 30px;
+  font-size: 50px;
+  align-self: center;
+}
+
+.img-main {
+  width: 380px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  margin: 20px;
+  list-style: none;
+}
+.btn-container .btn-main {
+  font-size: 26px;
+  font-family: "Chango", sans-serif;
+  color: #f28123;
+  background: none;
+  border: 2px solid #9fbbcc;
+  border-radius: 25px;
+  box-shadow: 0px 7px 5px 3px rgba(163, 205, 231, 0.9058823529);
+  padding: 8px;
+  margin: 12px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(39, 36, 36, 0.767);
+  list-style: none;
+}
+.footer-container .icon-footer {
+  font-size: 18px;
+  color: #fff600;
+  margin: 20px 0 20px 0;
+}
+.footer-container .footer-copyright {
+  color: white;
+}
+
+.orders-nav-container {
+  display: flex;
+}
+.orders-nav-container .orders-nav-link {
+  list-style: none;
+}
+.orders-nav-container .orders-link {
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

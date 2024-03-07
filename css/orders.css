@@ -1,0 +1,9 @@
+.orders-nav-container {
+  display: flex;
+}
+.orders-nav-container .orders-nav-link {
+  list-style: none;
+}
+.orders-nav-container .orders-link {
+  color: white;
+}/*# sourceMappingURL=orders.css.map */
