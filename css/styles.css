@@ -12,6 +12,61 @@ body .chango-regular {
   font-style: normal;
 }
 
+.orders-nav-container {
+  display: flex;
+}
+.orders-nav-container .orders-nav-img {
+  width: 84px;
+}
+.orders-nav-container .orders-nav-link {
+  color: #f28123;
+  list-style: none;
+  font-family: "Chango", sans-serif;
+}
+
+.select-style {
+  position: relative;
+  font-family: "Chango", sans-serif;
+}
+.select-style select {
+  display: none;
+}
+
+.main-form {
+  font-family: "Chango", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-form .sides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-form .sides .choice {
+  display: flex;
+}
+
+.orders-sub-header {
+  color: #f28123;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/img/dark\ codex.png);
+}
+body .chango-regular {
+  font-family: "Chango", sans-serif;
+  font-style: normal;
+}
+
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -44,7 +99,7 @@ body .chango-regular {
   flex-direction: column;
   align-items: center;
   align-items: center;
-  margin: 20px;
+  margin: 12px;
   list-style: none;
 }
 .btn-container .btn-main {
@@ -55,8 +110,18 @@ body .chango-regular {
   border: 2px solid #9fbbcc;
   border-radius: 25px;
   box-shadow: 0px 7px 5px 3px rgba(163, 205, 231, 0.9058823529);
-  padding: 8px;
-  margin: 12px;
+  padding: 16px;
+  margin: 20px;
+}
+.btn-container .btn-main:hover {
+  cursor: pointer;
+}
+.btn-container .btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f28123;
+  text-decoration: none;
 }
 
 .footer-container {
@@ -71,17 +136,10 @@ body .chango-regular {
   font-size: 18px;
   color: #fff600;
   margin: 20px 0 20px 0;
+  padding-left: 8px;
+  text-decoration: none;
 }
 .footer-container .footer-copyright {
   color: white;
-}
-
-.orders-nav-container {
-  display: flex;
-}
-.orders-nav-container .orders-nav-link {
-  list-style: none;
-}
-.orders-nav-container .orders-link {
-  color: white;
+  font-size: 12px;
 }/*# sourceMappingURL=styles.css.map */

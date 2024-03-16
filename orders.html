@@ -21,17 +21,162 @@
       src="https://kit.fontawesome.com/be7426d16a.js"
       crossorigin="anonymous"
     ></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="orders-nav-container">
-        <img class="orders-nav-img" src="/img/sun-removebg-preview.png">
-        <ul class="orders-nav-link">
-            <li class="orders-link">Home</li>
-            <li class="orders-link">Order for Collection</li>
-            <li class="orders-link">Menu</li>
-            
-        </ul>
+            <img class="orders-nav-img" src="/img/sun-removebg-preview.png" alt="aztec sun logo">
+                <ul class="orders-nav-link">
+                    <li class="orders-link">Home</li>
+                    <li class="orders-link">Order for Collection</li>
+                    <li class="orders-link">Menu</li>  
+                    <li><i class="fa-solid fa-basket-shopping"></i></li>
+                </ul>
     </nav>
+
+    <main>
+        <form class="main-form">
+        <div class="choose-style">
+            <h3 class="orders-sub-header">Choose your style</h3>
+            <select>              
+                <option  value="0" disabled selected>E.g Aztec sun (beans)</option>
+                <option  value="Aztec sun">Aztec sun (beans)</option>
+                <option  value="Fajita">Fajita (Grilled peppers and onions)</option>
+                <option  value="Vegetarian">Vegeterian</option>
+                <option  value="Vegan">Vegan</option>
+                <option  value="Naked Aztec sun">Naked Aztec sun</option>
+                <option  value="Naked Fajita">Naked Fajita</option>
+                <option  value="Naked Vegetarian">Naked Vegeterian</option>
+                <option  value="Naked Vegan">Naked Vegan</option>
+            </select>
+        </div>
+        
+
+        <div class="fillings">
+            <h3 class="orders-sub-header">Choose your filling</h3>
+                <select> 
+                        <option value="0" disabled selected>E.g Chicken</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Ground Beef (Picadillo)">Ground Beef (Picadillo)</option>
+                        <option value="Pulled pork(Cochinita)">Pulled pork(Cochinita)</option>
+                        <option value="Longaniza(Mexican Chorizo)">Longaniza(Mexican Chorizo)</option>
+                        <option value="Vegetarian">Vegetarian Guac insted of meat</option>
+                        <option value="Vegan"> Vegan Guac and Crushed tortilla chips(No dairy)</option>
+                </select>
+        </div>
+
+        <div class="salsas">
+            <h3 class="orders-sub-header">Choose a salsa</h3>
+                <select> 
+                        <option value="0" disabled selected>E.g Chunkie tomato salsa(Pico de gallo)"Mild"</option>
+                        <option value="Chunkie-tomato-salsa">Chunkie tomato salsa(Pico de gallo)"Mild"</option>
+                        <option value="salsa-verde">Salsa verde (Green tomatillo) "Medium"</option>
+                        <option value="salsa-roja">Salsa roja (chile de arbol)"Hot"</option>
+                        <option value="chunkie-corn">Chunkie corn chipotle "Mild"</option>
+                        <option value="no-salsa">No salsa</option>
+                </select>
+        </div>
+
+
+            <div class="extras-inside">
+                <h3 class="orders-sub-header">Extras inside your Burrito</h3>
+                <input type="checkbox" name="guacamole">
+                <label for="guacamole">Guacamole £2</label>
+                <input type="checkbox" name="Jalapeños">
+                <label for="jalapeños">Jalapeños £1</label>
+            </div>
+            <div>
+                <h3 class="orders-sub-header">Leave out?</h3>
+                <select>
+                    <option value="0" disabled selected>E.g Cheese</option>
+                    <option value="beans">Beans</option>
+                    <option value="peppers-onins">Peppers and onions</option>
+                    <option value="cheese">Cheese</option>
+                    <option value="soured-cream">Soured cream</option>
+                </select> 
+             </div>
+
+            <div class="sides">
+                <h3 class="orders-sub-header">Extras on the side</h3>
+
+                <div class="choice">
+                    <input type="checkbox" name="tortilla-chips">
+                    <label for="tortilla-chips">Bag of tortilla chips £2</label>
+                </div>
+
+                <div class="choice">
+                <input type="checkbox" name="pot-guacamole">
+                <label for="pot-guacamole">Pot of guacamole £2</label>
+                </div>
+                
+                <div class="choice">
+                <input type="checkbox" name="pot-soured-cream">
+                <label for="pot-soured-cream">Pot of soured cream £1.5</label>
+                </div>
+
+                <div class="side-salsa">
+                    <h3 class="orders-sub-header">Pot of salsa £1</h3>
+                <input type="checkbox" name="green">
+                <label for="green">Salsa verde (Green tomatillo) "Medium"</label>
+                <input type="number" value="" min="0" max="99">
+                <input type="checkbox" name="mild">
+                <label for="mild">Chunkie tomato salsa(Pico de gallo)"Mild"</label>
+                <input type="number" value="" min="0" max="99">
+                <input type="checkbox" name="roja">
+                <label for="roja">Salsa roja (chile de arbol)"hot"</label> 
+                <input type="number" value="" min="0" max="99"> 
+                <input type="checkbox" name="corn">
+                <label for="corn">Chunkie corn chipotle "mild"</label>
+                <input type="number" value="" min="0" max="99">                  
+                </div>
+            </div>  
+            
+            <div class="drinks">
+                <h3 class="orders-sub-header">Drinks</h3>
+                <input type="checkbox" name="coca-cola" value="coca-cola">
+                <label for="coca-cola">Coca-cola</label>
+                <input type="number" name="coca-cola" min="0" max="10" value="">
+
+                <input type="checkbox" name="diet-coke" value="diet-coke">
+                <label for="diet-coke">Diet-coke</label>
+                <input type="number" name="diet-coke" min="0" max="10" value="">
+
+                <input type="checkbox" name="coca-cola-zero" value="coca-cola-zero">
+                <label for="coca-cola-zero">Coca-cola zero</label>
+                <input type="number" name="coca-cola-zero" min="0" max="10" value="">
+
+                <input type="checkbox" name="jarrito-mango" value="jarrito-mango">
+                <label for="jarrito-mango">Jarrito mango</label>
+                <input type="number" name="jarrito-mango" min="0" max="10" value="">
+
+                <input type="checkbox" name="jarrito-lemon-lime" value="jarrito-lemon-lime">
+                <label for="jarrito-lemon-lime">Jarrito lemon lime</label>
+                <input type="number" name="jarrito-lemon-lime" min="0" max="10" value="">
+
+                <input type="checkbox" name="jarrito-grapefruit" value="jarrito-grapefruit">
+                <label for="jarrito-grapefruit">Jarrito grapefruit</label>
+                <input type="number" name="jarrito-grapefruit" min="0" max="10" value="">
+
+                <input type="checkbox" name="jarrito-guava" value="jarrito-guava">
+                <label for="jarrito-guava">Jarrito guava</label>
+                <input type="number" name="jarrito-guava" min="0" max="10" value="">
+              </div>
+            
+             <div>
+             <button>Basket</button>
+             <button>Checkout</button>
+            </div>
+
+        </form>
+        
+    </main>
+
+    <footer>
+        <ul class="footer-container">
+          <li><i class="fa-brands fa-instagram icon-footer"><a class="icon-footer" href="#" target="_blank">Follow us</a></i></li>
+          <li><i class="fa-solid fa-envelope icon-footer"><a class="icon-footer" href="mailto:lucas_zooyork@live.com" target="_blank">Contact us</a></i></li>
+          <li class="footer-copyright">Copyright ©2024 Aztec Sun Burritos. All rights reserved.</li>
+        </ul>
+      </footer>
   </body>
   </html>

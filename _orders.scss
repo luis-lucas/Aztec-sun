@@ -1,0 +1,47 @@
+
+@import "base";
+
+.orders-nav-container {
+    display: flex;
+
+    .orders-nav-img {
+        width: 84px;
+    }
+
+    .orders-nav-link {
+        color: $orange;
+        list-style: none;
+        font-family: "Chango", sans-serif;
+    }
+}
+
+.select-style {
+   position: relative;
+   font-family: "Chango", sans-serif;
+  
+   select {
+    display: none;
+   }
+}
+.main-form {
+    font-family: "Chango", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     .sides {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .choice {
+            display: flex;
+        }
+     }
+}
+
+.orders-sub-header {
+    color: $orange;
+    }
+    
+    
