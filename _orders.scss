@@ -44,4 +44,7 @@
     color: $orange;
     }
     
-    
+    .all-extras {
+        display: flex;
+        flex-direction: column;
+    }

@@ -17,6 +17,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
 
+<script defer src="./main.js"></script>
+
 <script
       src="https://kit.fontawesome.com/be7426d16a.js"
       crossorigin="anonymous"
@@ -36,9 +38,9 @@
 
     <main>
         <form class="main-form">
-        <div class="choose-style">
+        <div class="choose-style" id="choose-style">
             <h3 class="orders-sub-header">Choose your style</h3>
-            <select>              
+            <select id="style-select">              
                 <option  value="0" disabled selected>E.g Aztec sun (beans)</option>
                 <option  value="Aztec sun">Aztec sun (beans)</option>
                 <option  value="Fajita">Fajita (Grilled peppers and onions)</option>
@@ -52,9 +54,9 @@
         </div>
         
 
-        <div class="fillings">
+        <div class="fillings" id="filling">
             <h3 class="orders-sub-header">Choose your filling</h3>
-                <select> 
+                <select id="fillings-select"> 
                         <option value="0" disabled selected>E.g Chicken</option>
                         <option value="Chicken">Chicken</option>
                         <option value="Ground Beef (Picadillo)">Ground Beef (Picadillo)</option>
@@ -65,9 +67,9 @@
                 </select>
         </div>
 
-        <div class="salsas">
+        <div class="salsas" id="salsas">
             <h3 class="orders-sub-header">Choose a salsa</h3>
-                <select> 
+                <select id="salsas-select"> 
                         <option value="0" disabled selected>E.g Chunkie tomato salsa(Pico de gallo)"Mild"</option>
                         <option value="Chunkie-tomato-salsa">Chunkie tomato salsa(Pico de gallo)"Mild"</option>
                         <option value="salsa-verde">Salsa verde (Green tomatillo) "Medium"</option>
@@ -77,17 +79,21 @@
                 </select>
         </div>
 
+           
 
-            <div class="extras-inside">
+
+
+            <div class="extras-inside" id="extras-inside" >
                 <h3 class="orders-sub-header">Extras inside your Burrito</h3>
-                <input type="checkbox" name="guacamole">
+                <input id="guacamole" type="checkbox" name="guacamole">
                 <label for="guacamole">Guacamole £2</label>
-                <input type="checkbox" name="Jalapeños">
+                <input id="jalapeños" type="checkbox" name="jalapeños">
                 <label for="jalapeños">Jalapeños £1</label>
             </div>
-            <div>
+            <!-- change select for check box -->
+            <div class="leave-out" id="leave-out" >
                 <h3 class="orders-sub-header">Leave out?</h3>
-                <select>
+                <select id="leave-out-select">
                     <option value="0" disabled selected>E.g Cheese</option>
                     <option value="beans">Beans</option>
                     <option value="peppers-onins">Peppers and onions</option>
@@ -96,7 +102,16 @@
                 </select> 
              </div>
 
-            <div class="sides">
+             <div>
+                <input type= "number" id="burritos-quantity" value="1" min="1" max="99">
+             </div>
+
+            <button class="add-burrito" id="add-burrito">Add Burrito to Basket</button> 
+             <button class="step-two" id="step-two">Next Step</button> 
+
+             <div class="all-extras" id="all-extras" style="display: none;"> 
+
+            <div class="sides" id="sides" >
                 <h3 class="orders-sub-header">Extras on the side</h3>
 
                 <div class="choice">
@@ -114,24 +129,24 @@
                 <label for="pot-soured-cream">Pot of soured cream £1.5</label>
                 </div>
 
-                <div class="side-salsa">
+                <div class="side-salsas" id="side-salsas" >
                     <h3 class="orders-sub-header">Pot of salsa £1</h3>
                 <input type="checkbox" name="green">
                 <label for="green">Salsa verde (Green tomatillo) "Medium"</label>
-                <input type="number" value="" min="0" max="99">
+                <input type="number" value="0" min="0" max="99">
                 <input type="checkbox" name="mild">
                 <label for="mild">Chunkie tomato salsa(Pico de gallo)"Mild"</label>
-                <input type="number" value="" min="0" max="99">
+                <input type="number" value="0" min="0" max="99">
                 <input type="checkbox" name="roja">
                 <label for="roja">Salsa roja (chile de arbol)"hot"</label> 
-                <input type="number" value="" min="0" max="99"> 
+                <input type="number" value="0" min="0" max="99"> 
                 <input type="checkbox" name="corn">
                 <label for="corn">Chunkie corn chipotle "mild"</label>
-                <input type="number" value="" min="0" max="99">                  
+                <input type="number" value="0" min="0" max="99">                  
                 </div>
             </div>  
             
-            <div class="drinks">
+            <div class="drinks" id="drinks" >
                 <h3 class="orders-sub-header">Drinks</h3>
                 <input type="checkbox" name="coca-cola" value="coca-cola">
                 <label for="coca-cola">Coca-cola</label>
@@ -162,10 +177,11 @@
                 <input type="number" name="jarrito-guava" min="0" max="10" value="">
               </div>
             
-             <div>
-             <button>Basket</button>
-             <button>Checkout</button>
+             <div class="finished-transaction" id="finished-transaction">
+             <button class="basket-button" id="basket-button">Basket</button>
+             <button class="checkout-button" id="checkout-button">Checkout</button>
             </div>
+        </div>     
 
         </form>
         

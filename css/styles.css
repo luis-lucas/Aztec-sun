@@ -53,6 +53,11 @@ body .chango-regular {
   color: #f28123;
 }
 
+.all-extras {
+  display: flex;
+  flex-direction: column;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
