@@ -6,6 +6,7 @@
 
 body {
   background-image: url(/img/dark\ codex.png);
+  position: relative;
 }
 body .chango-regular {
   font-family: "Chango", sans-serif;
@@ -14,12 +15,21 @@ body .chango-regular {
 
 .orders-nav-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(39, 36, 36, 0.767);
+  margin-bottom: 30px;
 }
 .orders-nav-container .orders-nav-img {
   width: 84px;
 }
 .orders-nav-container .orders-nav-link {
-  color: #f28123;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff600;
   list-style: none;
   font-family: "Chango", sans-serif;
 }
@@ -38,6 +48,7 @@ body .chango-regular {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .main-form .sides {
   display: flex;
@@ -45,8 +56,14 @@ body .chango-regular {
   align-items: center;
   justify-content: center;
 }
-.main-form .sides .choice {
+.main-form .choice {
   display: flex;
+  flex-direction: column;
+}
+
+.choice-input {
+  width: 50px;
+  border: solid 3px blue;
 }
 
 .orders-sub-header {
@@ -54,8 +71,58 @@ body .chango-regular {
 }
 
 .all-extras {
+  text-align: center;
+  flex-direction: column;
+}
+
+.extras-name {
+  color: #9fbbcc;
+}
+
+.leave-out-select {
   display: flex;
   flex-direction: column;
+  color: #9fbbcc;
+  align-items: baseline;
+}
+
+.how-many-text {
+  color: #f28123;
+}
+
+.tortilla-chips-sides {
+  color: #9fbbcc;
+}
+
+.leave-out-check {
+  color: #9fbbcc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.drinks {
+  display: flex;
+  flex-direction: column;
+  color: #9fbbcc;
+}
+
+.tortilla-chips-sides {
+  display: flex;
+  flex-direction: column;
+}
+.tortilla-chips-sides .choice {
+  flex-direction: column;
+}
+
+.side-salsas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 * {
@@ -66,6 +133,7 @@ body .chango-regular {
 
 body {
   background-image: url(/img/dark\ codex.png);
+  position: relative;
 }
 body .chango-regular {
   font-family: "Chango", sans-serif;
@@ -127,6 +195,7 @@ body .chango-regular {
   justify-content: center;
   color: #f28123;
   text-decoration: none;
+  text-align: center;
 }
 
 .footer-container {

@@ -3,13 +3,22 @@
 
 .orders-nav-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(39, 36, 36, 0.767);
+    margin-bottom: 30px;
 
     .orders-nav-img {
         width: 84px;
     }
 
     .orders-nav-link {
-        color: $orange;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $yellow;
         list-style: none;
         font-family: "Chango", sans-serif;
     }
@@ -29,22 +38,77 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
      .sides {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .choice {
-            display: flex;
-        }
      }
+     .choice {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.choice-input {
+    width: 50px;
+    border: solid 3px blue ;
 }
 
 .orders-sub-header {
     color: $orange;
+    
     }
     
     .all-extras {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .extras-name {
+        color: $blue;
+    }
+
+    .leave-out-select {
         display: flex;
         flex-direction: column;
+        color: $blue;
+        align-items: baseline;
+        
+    }
+
+    .how-many-text {
+        color: $orange;
+    }
+
+    .tortilla-chips-sides {
+        color: $blue;
+    }
+    .leave-out-check {
+        color: $blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+    }
+    .drinks {
+        display: flex;
+        flex-direction: column;
+        color: $blue;
+    }
+    .tortilla-chips-sides {
+        display: flex;
+        flex-direction: column;
+        .choice {
+            flex-direction: column;
+        }
+    }
+    .side-salsas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }

@@ -30,8 +30,9 @@
             <img class="orders-nav-img" src="/img/sun-removebg-preview.png" alt="aztec sun logo">
                 <ul class="orders-nav-link">
                     <li class="orders-link">Home</li>
-                    <li class="orders-link">Order for Collection</li>
-                    <li class="orders-link">Menu</li>  
+                    <li class="orders-link">Collection</li>
+                    <li class="orders-link">Menu</li>
+                    <li class="orders-link">Delivery</li>   
                     <li><i class="fa-solid fa-basket-shopping"></i></li>
                 </ul>
     </nav>
@@ -41,15 +42,16 @@
         <div class="choose-style" id="choose-style">
             <h3 class="orders-sub-header">Choose your style</h3>
             <select id="style-select">              
-                <option  value="0" disabled selected>E.g Aztec sun (beans)</option>
-                <option  value="Aztec sun">Aztec sun (beans)</option>
-                <option  value="Fajita">Fajita (Grilled peppers and onions)</option>
-                <option  value="Vegetarian">Vegeterian</option>
-                <option  value="Vegan">Vegan</option>
-                <option  value="Naked Aztec sun">Naked Aztec sun</option>
+                <option  value="0" disabled selected>E.g Aztec sun</option>
+                <option  value="Aztec sun">Aztec Sun Burrito</option>
+                <option  value="Fajita">Fajita Burrito</option>
+                <option  value="Vegetarian">Vegeterian Burrito</option>
+                <option  value="Vegan">Vegan Burrito</option>    
+                <option  value="Naked Aztec sun">Naked Aztec Sun</option>
                 <option  value="Naked Fajita">Naked Fajita</option>
                 <option  value="Naked Vegetarian">Naked Vegeterian</option>
                 <option  value="Naked Vegan">Naked Vegan</option>
+                <option value="quesadilla">Quesadilla</option>
             </select>
         </div>
         
@@ -58,24 +60,24 @@
             <h3 class="orders-sub-header">Choose your filling</h3>
                 <select id="fillings-select"> 
                         <option value="0" disabled selected>E.g Chicken</option>
-                        <option value="Chicken">Chicken</option>
-                        <option value="Ground Beef (Picadillo)">Ground Beef (Picadillo)</option>
-                        <option value="Pulled pork(Cochinita)">Pulled pork(Cochinita)</option>
-                        <option value="Longaniza(Mexican Chorizo)">Longaniza(Mexican Chorizo)</option>
-                        <option value="Vegetarian">Vegetarian Guac insted of meat</option>
-                        <option value="Vegan"> Vegan Guac and Crushed tortilla chips(No dairy)</option>
+                        <option value="Chicken" data-price="9">Chicken £9</option>
+                        <option value="Ground Beef (Picadillo)" data-price="8">Ground Beef (Picadillo) £8</option>
+                        <option value="Pulled pork(Cochinita)" data-price="9">Pulled Pork(Cochinita) £9</option>
+                        <option value="Longaniza(Mexican Chorizo)" data-price="8">Longaniza(Mexican Chorizo) £8</option>
+                        <option value="Vegetarian" data-price="9">Vegetarian Guac insted of meat £9</option>
+                        <option value="Vegan" data-price="9"> Vegan Guac and Crushed tortilla chips(No dairy) £9</option>
                 </select>
         </div>
 
         <div class="salsas" id="salsas">
             <h3 class="orders-sub-header">Choose a salsa</h3>
                 <select id="salsas-select"> 
-                        <option value="0" disabled selected>E.g Chunkie tomato salsa(Pico de gallo)"Mild"</option>
-                        <option value="Chunkie-tomato-salsa">Chunkie tomato salsa(Pico de gallo)"Mild"</option>
-                        <option value="salsa-verde">Salsa verde (Green tomatillo) "Medium"</option>
-                        <option value="salsa-roja">Salsa roja (chile de arbol)"Hot"</option>
-                        <option value="chunkie-corn">Chunkie corn chipotle "Mild"</option>
-                        <option value="no-salsa">No salsa</option>
+                        <option value="0" disabled selected>E.g Chunky Tomato Salsa(Pico de Gallo)"Mild"</option>
+                        <option value="Chunkie-tomato-salsa">Chunkie Tomato Salsa(Pico de Gallo)"Mild"</option>
+                        <option value="salsa-verde">Salsa Verde (Green tomatillo) "Medium"</option>
+                        <option value="salsa-roja">Salsa Roja (Chile de Arbol)"Hot"</option>
+                        <option value="chunkie-corn">Chunky Corn Chipotle "Mild"</option>
+                        <option value="no-salsa">No Salsa</option>
                 </select>
         </div>
 
@@ -86,99 +88,110 @@
             <div class="extras-inside" id="extras-inside" >
                 <h3 class="orders-sub-header">Extras inside your Burrito</h3>
                 <input id="guacamole" type="checkbox" name="guacamole">
-                <label for="guacamole">Guacamole £2</label>
+                <label class="extras-name" for="guacamole">Guacamole £2</label>
                 <input id="jalapeños" type="checkbox" name="jalapeños">
-                <label for="jalapeños">Jalapeños £1</label>
+                <label class="extras-name" for="jalapeños">Jalapeños £1</label>
             </div>
             <!-- change select for check box -->
             <div class="leave-out" id="leave-out" >
                 <h3 class="orders-sub-header">Leave out?</h3>
-                <select id="leave-out-select">
-                    <option value="0" disabled selected>E.g Cheese</option>
-                    <option value="beans">Beans</option>
-                    <option value="peppers-onins">Peppers and onions</option>
-                    <option value="cheese">Cheese</option>
-                    <option value="soured-cream">Soured cream</option>
-                </select> 
+                <div class="leave-out-check" id="leave-out-check">
+                    <span><input id="beans" type="checkbox" name="beans"><label for="beans">Beans</label></span>
+                    
+                    <span><input id="cheese" type="checkbox" name="cheese"><label for="cheese">Cheese</label></span>
+                    
+                   <span><input id="soured-cream" type="checkbox" name="soured-cream"><label for="soured-cream">Soured-cream</label></span>
+                    
+                    <span><input id="lettuce" type="checkbox" name="lettuce"><label for="lettuce">Lettuce</label></span>
+                    
+                </div> 
+             </div>
+  
+             <div class="how-many-container"> 
+                <!--the for and the id do not match need change-->
+                <label class="how-many-text" for="how-many">How many?</label>
+                <input type="number" id="burritos-quantity" value="1" min="1" max="99">
              </div>
 
-             <div>
-                <input type= "number" id="burritos-quantity" value="1" min="1" max="99">
-             </div>
-
-            <button class="add-burrito" id="add-burrito">Add Burrito to Basket</button> 
+            <button class="add-burrito" id="add-burrito">Add to Basket</button> 
              <button class="step-two" id="step-two">Next Step</button> 
 
-             <div class="all-extras" id="all-extras" style="display: none;"> 
+             <!--<div class="all-extras" id="all-extras" style="display: none;"> -->
 
             <div class="sides" id="sides" >
+            <div class="tortilla-chips-sides">
                 <h3 class="orders-sub-header">Extras on the side</h3>
+                 
+                <div class="choice">
+                <span><label for="tortilla-chips">Bag of tortilla chips £2.50</label>
+                    <input class="choice-input" id="tortilla-chips" type="number" name="tortilla-chips" data-price="2.50"></span>
 
-                <div class="choice">
-                    <input type="checkbox" name="tortilla-chips">
-                    <label for="tortilla-chips">Bag of tortilla chips £2</label>
-                </div>
+                <span><label for="tortilla-chips-salsa">Bag of tortilla chips with salsa £3.50</label>
+                    <input id="tortilla-chips-salsa" type="number" name="tortilla-chips-salsa" data-price="3.50"></span>
+                    
+                <span><label for="tortilla-chips-guacamole">Bag of tortilla chips with guacamole £4.50</label>
+                    <input id="tortilla-chips-guacamole" type="number" name="tortilla-chips-guacamole" data-price="4.50"></span>
+                   
+                <span><label for="pot-guacamole">Pot of guacamole £2</label>
+                    <input id="pot-guacamole" type="number" name="pot-guacamole" data-price="2"></span>
+                    
+                <span><label for="pot-soured-cream">Pot of soured cream £1.5</label>
+                    <input id="pot-soured-cream" type="number" name="pot-soured-cream" data-price="1.50"></span>
+                    
+                </div> 
 
-                <div class="choice">
-                <input type="checkbox" name="pot-guacamole">
-                <label for="pot-guacamole">Pot of guacamole £2</label>
-                </div>
-                
-                <div class="choice">
-                <input type="checkbox" name="pot-soured-cream">
-                <label for="pot-soured-cream">Pot of soured cream £1.5</label>
-                </div>
 
                 <div class="side-salsas" id="side-salsas" >
                     <h3 class="orders-sub-header">Pot of salsa £1</h3>
-                <input type="checkbox" name="green">
-                <label for="green">Salsa verde (Green tomatillo) "Medium"</label>
-                <input type="number" value="0" min="0" max="99">
-                <input type="checkbox" name="mild">
-                <label for="mild">Chunkie tomato salsa(Pico de gallo)"Mild"</label>
-                <input type="number" value="0" min="0" max="99">
-                <input type="checkbox" name="roja">
-                <label for="roja">Salsa roja (chile de arbol)"hot"</label> 
-                <input type="number" value="0" min="0" max="99"> 
-                <input type="checkbox" name="corn">
-                <label for="corn">Chunkie corn chipotle "mild"</label>
-                <input type="number" value="0" min="0" max="99">                  
+                
+                <span><label for="green">Salsa verde (Green tomatillo) "Medium"</label>
+                <input id="green" type="number" value="0" min="0" max="99" data-price="1"></span>
+                
+            <span><label for="mild">Chunkie tomato salsa(Pico de gallo)"Mild"</label>
+                <input id="mild" type="number" value="0" min="0" max="99" data-price="1"></span>
+               
+            <span><label for="roja">Salsa roja (chile de arbol)"hot"</label> 
+                <input id="roja" type="number" value="0" min="0" max="99" data-price="1"></span> 
+               
+            <span><label for="corn">Chunkie corn chipotle "mild"</label>
+                <input id="corn" type="number" value="0" min="0" max="99" data-price="1"></span>                  
                 </div>
             </div>  
             
             <div class="drinks" id="drinks" >
                 <h3 class="orders-sub-header">Drinks</h3>
-                <input type="checkbox" name="coca-cola" value="coca-cola">
-                <label for="coca-cola">Coca-cola</label>
-                <input type="number" name="coca-cola" min="0" max="10" value="">
+                
+                <span><label for="coca-cola">Coca-cola £2</label>
+                    <input id="coca-cola" type="number" name="coca-cola" min="0" max="10" data-price="2"></span>
 
-                <input type="checkbox" name="diet-coke" value="diet-coke">
-                <label for="diet-coke">Diet-coke</label>
-                <input type="number" name="diet-coke" min="0" max="10" value="">
+                
+                <span><label for="diet-coke">Diet-coke £2</label>
+                <input id="diet-coke" type="number" name="diet-coke" min="0" max="10" data-price="2"></span>
 
-                <input type="checkbox" name="coca-cola-zero" value="coca-cola-zero">
-                <label for="coca-cola-zero">Coca-cola zero</label>
-                <input type="number" name="coca-cola-zero" min="0" max="10" value="">
+               
+                
+                <span><label for="coca-cola-zero">Coca-cola zero £2</label>
+                <input id="coca-cola-zero" type="number" name="coca-cola-zero" min="0" max="10" data-price="2"></span>
 
-                <input type="checkbox" name="jarrito-mango" value="jarrito-mango">
-                <label for="jarrito-mango">Jarrito mango</label>
-                <input type="number" name="jarrito-mango" min="0" max="10" value="">
+                
+                <span><label for="jarrito-mango">Jarrito mango 3</label>
+                <input  id="jarrito-mango" type="number" name="jarrito-mango" min="0" max="10" data-price="3"></span>
 
-                <input type="checkbox" name="jarrito-lemon-lime" value="jarrito-lemon-lime">
-                <label for="jarrito-lemon-lime">Jarrito lemon lime</label>
-                <input type="number" name="jarrito-lemon-lime" min="0" max="10" value="">
+                
+                <span><label for="jarrito-lemon-lime">Jarrito lemon lime £3</label>
+                <input id="jarrito-lemon-lime" type="number" name="jarrito-lemon-lime" min="0" max="10" data-price="3"></span>
 
-                <input type="checkbox" name="jarrito-grapefruit" value="jarrito-grapefruit">
-                <label for="jarrito-grapefruit">Jarrito grapefruit</label>
-                <input type="number" name="jarrito-grapefruit" min="0" max="10" value="">
+             
+                <span><label for="jarrito-grapefruit">Jarrito grapefruit £3</label>
+                <input id="jarrito-grapefruit" type="number" name="jarrito-grapefruit" min="0" max="10" data-price="3"></span>
 
-                <input type="checkbox" name="jarrito-guava" value="jarrito-guava">
-                <label for="jarrito-guava">Jarrito guava</label>
-                <input type="number" name="jarrito-guava" min="0" max="10" value="">
+               
+                <span><label for="jarrito-guava">Jarrito guava £3</label>
+                <input id="jarrito-guava" type="number" name="jarrito-guava" min="0" max="10" data-price="3"></span>
               </div>
             
              <div class="finished-transaction" id="finished-transaction">
-             <button class="basket-button" id="basket-button">Basket</button>
+             <button class="add-to-basket" id="add-to-basket">Basket</button>
              <button class="checkout-button" id="checkout-button">Checkout</button>
             </div>
         </div>     
