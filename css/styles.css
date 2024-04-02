@@ -13,13 +13,21 @@ body .chango-regular {
   font-style: normal;
 }
 
+@layer base {
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
 .orders-nav-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(39, 36, 36, 0.767);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 .orders-nav-container .orders-nav-img {
   width: 84px;
@@ -32,6 +40,22 @@ body .chango-regular {
   color: #fff600;
   list-style: none;
   font-family: "Chango", sans-serif;
+  font-size: 25px;
+}
+.orders-nav-container .orders-nav-link li {
+  padding: 6px;
+}
+
+.fillings {
+  margin: 15px 0 15px 0;
+}
+
+.salsas {
+  margin: 15px 0 20px 0;
+}
+
+.extras-inside {
+  margin: 15px 0 20px 0;
 }
 
 .select-style {
@@ -40,6 +64,36 @@ body .chango-regular {
 }
 .select-style select {
   display: none;
+}
+
+.choose-style {
+  margin-bottom: 20px;
+}
+
+.choose-input {
+  background: none;
+  color: #9fbbcc;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px;
+  border: solid 0.5px white;
+  font-family: "Chango", sans-serif;
+  margin: 4px;
+  flex-wrap: wrap;
+}
+.choose-input option {
+  color: rgb(78, 75, 74);
+  display: flex;
+}
+.choose-input:hover {
+  border: solid 1px #f28123;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  font-family: "Chango", sans-serif;
+}
+
+.box {
+  background: none;
 }
 
 .main-form {
@@ -59,15 +113,32 @@ body .chango-regular {
 .main-form .choice {
   display: flex;
   flex-direction: column;
+  margin: 10px 0 10px 0;
+}
+.main-form .choice-text {
+  margin-bottom: 4px;
 }
 
 .choice-input {
-  width: 50px;
-  border: solid 3px blue;
+  background: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  width: 40px;
+  border-radius: 5px;
+  border: solid 0.5px white;
+  text-align: center;
+}
+.choice-input:hover {
+  width: 46px;
+  border: solid 1px #f28123;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 .orders-sub-header {
   color: #f28123;
+  font-size: 34px;
 }
 
 .all-extras {
@@ -86,12 +157,18 @@ body .chango-regular {
   align-items: baseline;
 }
 
+.leave-out {
+  margin: 15px 0 20px 0;
+}
+
 .how-many-text {
   color: #f28123;
+  font-size: 30px;
 }
 
 .tortilla-chips-sides {
   color: #9fbbcc;
+  font-size: medium;
 }
 
 .leave-out-check {
@@ -123,6 +200,27 @@ body .chango-regular {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 15px 0 20px 0;
+}
+
+.btn {
+  background: rgb(18, 57, 80);
+  background: radial-gradient(circle, rgba(18, 57, 80, 0.2791491597) 88%, rgb(242, 129, 35) 96%, rgb(255, 246, 0) 100%);
+  font-family: "Chango", sans-serif;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+  border: solid 0.5px #fff600;
+  box-shadow: 0px 0px 50px 30px #9fbbcc inset;
+  box-shadow: -1px 9px 15px -2px rgba(159, 187, 204, 0.8);
+  margin: 10px;
+}
+.btn:hover {
+  border: solid 1px #f28123;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  font-family: "Chango", sans-serif;
+  padding: 10px;
 }
 
 * {
@@ -196,6 +294,7 @@ body .chango-regular {
   color: #f28123;
   text-decoration: none;
   text-align: center;
+  width: 220px;
 }
 
 .footer-container {

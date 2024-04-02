@@ -1,13 +1,22 @@
 
 @import "base";
 
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
 .orders-nav-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(39, 36, 36, 0.767);
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
 
     .orders-nav-img {
         width: 84px;
@@ -21,9 +30,21 @@
         color: $yellow;
         list-style: none;
         font-family: "Chango", sans-serif;
+        font-size: 25px;
+        li{
+            padding: 6px;
+        }
     }
 }
-
+ .fillings {
+    margin: 15px 0 15px 0;
+ }
+ .salsas {
+    margin: 15px 0 20px 0;
+ }
+ .extras-inside {
+    margin: 15px 0 20px 0;
+ }
 .select-style {
    position: relative;
    font-family: "Chango", sans-serif;
@@ -32,6 +53,33 @@
     display: none;
    }
 }
+.choose-style {
+margin-bottom: 20px;
+}
+.choose-input {
+    background: none;
+    color: $blue;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 5px;
+   border: solid 0.5px white;
+   font-family: "Chango", sans-serif;
+   margin: 4px;
+    option {
+        color: rgb(78, 75, 74);
+        display: flex;
+    }
+    flex-wrap: wrap;
+    &:hover {
+   border: solid 1px $orange;
+   transition: ease-in-out 0.2s;
+   cursor: pointer;
+   font-family: "Chango", sans-serif;
+    }
+}
+ .box {
+    background: none;
+ }
 .main-form {
     font-family: "Chango", sans-serif;
     display: flex;
@@ -49,15 +97,34 @@
      .choice {
         display: flex;
         flex-direction: column;
+        margin: 10px 0 10px 0;
+    }
+    .choice-text {
+        margin-bottom: 4px;
     }
 }
-.choice-input {
-    width: 50px;
-    border: solid 3px blue ;
+.choice-input { 
+   background: none; 
+   color: white;
+   font-weight: 700;
+   font-size: 14px;
+   width: 40px;
+   border-radius: 5px;
+   border: solid 0.5px white;
+   text-align: center;
+   &:hover{
+    width: 46px;
+   border: solid 1px $orange;
+   transition: ease-in-out 0.2s;
+   cursor: pointer;
+
+   }   
 }
+
 
 .orders-sub-header {
     color: $orange;
+    font-size: 34px;
     
     }
     
@@ -77,13 +144,18 @@
         align-items: baseline;
         
     }
-
+    .leave-out {
+        margin: 15px 0 20px 0;
+    }
     .how-many-text {
         color: $orange;
+        font-size: 30px;
     }
 
     .tortilla-chips-sides {
         color: $blue;
+        font-size: medium;
+       
     }
     .leave-out-check {
         color: $blue;
@@ -111,4 +183,24 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 15px 0 20px 0;
+    }
+    .btn {
+        background: rgb(18,57,80);
+        background: radial-gradient(circle, rgba(18,57,80,0.27914915966386555) 88%, rgba(242,129,35,1) 96%, rgba(255,246,0,1) 100%);
+        font-family: "Chango", sans-serif;
+        color: white;
+        border-radius: 8px;
+        padding: 8px;
+        border: solid 0.5px $yellow;
+        box-shadow:0px 0px 50px 30px #9fbbcc inset;
+        box-shadow: -1px 9px 15px -2px rgba(159,187,204,0.8);
+        margin: 10px;
+        &:hover {
+            border: solid 1px $orange;
+            transition: ease-in-out 0.2s;
+            cursor: pointer;
+            font-family: "Chango", sans-serif;
+            padding: 10px;
+             }
     }
