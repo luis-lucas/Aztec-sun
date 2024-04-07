@@ -37,6 +37,7 @@ const jarritoLemonLime= document.getElementById ("jarrito-lemon-lime")
 const jarritoGrapefruit= document.getElementById ("jarrito-grapefruit")
 const jarritoGuava= document.getElementById ("jarrito-guava")
 const drinks= document.getElementById ("drinks")
+const extras= []
 //add price to burritos on the  choose style//
 const burritosOrder= []
 
@@ -51,12 +52,20 @@ addBurritoButton.addEventListener("click",(e)=>{
     let jalapeños=0
     let guacamole=0
     if(jalapeñosCheck.checked){
-      jalapeños= 1
+      jalapeños={name:"jalapeños",price:1}
+
     }
     if(guacamoleCheck.checked) {
-         guacamole= 2
+        guacamole={name:"guacamole",price:2}
     }
-    
+    let extrasInside= []
+    const insideObj={
+        jalapeños,guacamole
+    }
+     extrasInside.push(insideObj)
+    const totalExtrasInside= extrasInside.reduce((acc,obj)=>acc+obj.price,0)
+    console.log(totalExtrasInside)
+
     let beans=0 
     let cheese=0
     let lettuce=0
@@ -79,11 +88,13 @@ addBurritoButton.addEventListener("click",(e)=>{
         filling: fillingsSelected,
         fillingPrice,
         salsa: salsasSelected,
-        extras: {jalapeños,guacamole},
+        extras: extrasInside,
+        extrasPrice:totalExtrasInside,
         leaveOut:{
             beans,cheese,lettuce,souredCream
         },
-        quantity: burritosQuantity.value,
+        quantity: parseInt(burritosQuantity.value),
+        totalBurrito:(fillingPrice+totalExtrasInside)*burritosQuantity.value
     }
     burritosOrder.push(burrito)
     resetForm()
@@ -136,5 +147,18 @@ addToBasket.addEventListener("click",(e)=>{
 })
 
 const extrasOnTheSide= ()=> {
-
+let extrasChoice = document.querySelectorAll(".extras")
+extrasChoice.forEach(extra=>{
+    const name= extra.getAttribute("name")
+    const quantity= parseInt(extra.value)
+    const price= extra.getAttribute("data-price")
+    if(quantity!="" && quantity >0){
+    const extrasObj= {
+        name, quantity, price, totalPrice:quantity*price
+    }
+    extras.push(extrasObj)
+    }
+})
+const totalExtras= extras.reduce((acc,obj)=>acc+obj.totalPrice,0)
+extras.push({totalExtras})
 } 
