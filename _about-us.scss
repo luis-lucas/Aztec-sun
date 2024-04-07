@@ -1,0 +1,65 @@
+
+@import "base";
+
+.about-us-body {
+    background: none;
+}
+
+.about-nav-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(39, 36, 36, 0.767);
+    a {
+        text-decoration: none;
+        font-size: x-large;
+        color: $yellow;
+        font-family: "Chango", sans-serif;
+    }
+}
+.about-nav-img {
+    width: 80px;
+
+}
+.about-nav-link {
+display: flex;
+flex-direction: row;
+width: 100%;
+align-items: center;
+justify-content: space-evenly;
+list-style: none;
+}
+.us {
+    color: $yellow;
+    font-size: 30px;
+}
+
+.card-container {
+    height: 400px;
+   
+   
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/gray\ codex.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: "Chango", sans-serif;
+  }
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $orange;
+    text-shadow: 1px 1px 0.5px rgba(159,187,204,0.6);
+    p {
+        font-size: 20px;  
+    }
+  }
+  .mono {
+    height: 100px;
+}

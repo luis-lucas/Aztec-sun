@@ -135,3 +135,6 @@ addToBasket.addEventListener("click",(e)=>{
 
 })
 
+const extrasOnTheSide= ()=> {
+
+} 
