@@ -37,6 +37,7 @@ const jarritoLemonLime= document.getElementById ("jarrito-lemon-lime")
 const jarritoGrapefruit= document.getElementById ("jarrito-grapefruit")
 const jarritoGuava= document.getElementById ("jarrito-guava")
 const drinks= document.getElementById ("drinks")
+const checkoutBtn= document.getElementById("checkout-button")
 const extras= []
 //add price to burritos on the  choose style//
 const burritosOrder= []
@@ -49,20 +50,15 @@ addBurritoButton.addEventListener("click",(e)=>{
     let fillingsOption= fillingsSelect.selectedOptions[0]
     let fillingPrice= parseInt(fillingsOption.dataset.price)
     let salsasSelected= salsasSelect.value
-    let jalapeños=0
-    let guacamole=0
+    let extrasInside= []
     if(jalapeñosCheck.checked){
-      jalapeños={name:"jalapeños",price:1}
-
+    extrasInside.push({name:"jalapeños",price:1})
+    
     }
     if(guacamoleCheck.checked) {
-        guacamole={name:"guacamole",price:2}
+    extrasInside.push({name:"guacamole",price:2})
     }
-    let extrasInside= []
-    const insideObj={
-        jalapeños,guacamole
-    }
-     extrasInside.push(insideObj)
+    
     const totalExtrasInside= extrasInside.reduce((acc,obj)=>acc+obj.price,0)
     console.log(totalExtrasInside)
 
@@ -161,4 +157,19 @@ extrasChoice.forEach(extra=>{
 })
 const totalExtras= extras.reduce((acc,obj)=>acc+obj.totalPrice,0)
 extras.push({totalExtras})
+console.log(extras)
+return extras
 } 
+let totalBurritos=0;
+const calcBurritosOrder= ()=>{
+totalBurritos= burritosOrder.reduce((acc,obj)=>acc+obj.totalBurrito,0)
+console.log(burritosOrder)
+console.log(totalBurritos)
+return totalBurritos
+}
+
+checkoutBtn.addEventListener("click",(e)=>{
+    e.preventDefault()
+    extrasOnTheSide()
+    calcBurritosOrder()
+})
