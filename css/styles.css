@@ -230,6 +230,42 @@ body .chango-regular {
   padding: 10px;
 }
 
+@media (min-width: 768px) {
+  body {
+    font-size: 50px;
+  }
+  .side-salsas, .choice {
+    font-size: 40px;
+  }
+  .orders-sub-header {
+    font-size: 45px;
+  }
+  .orders-link {
+    font-size: 40px;
+  }
+  .choose-input {
+    font-size: 30px;
+  }
+  .btn {
+    font-size: 30px;
+    padding: 4px;
+  }
+  .how-many-text {
+    font-size: 45px;
+  }
+  .choice-input {
+    font-size: 20px;
+    width: 60px;
+  }
+  input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+  }
+  .extras-name {
+    font-size: 38px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
