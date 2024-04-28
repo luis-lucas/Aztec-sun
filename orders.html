@@ -201,9 +201,19 @@
                 <span><label for="jarrito-guava">Jarrito guava £3</label>
                 <input class="choice-input extras" id="jarrito-guava" type="number" name="jarrito-guava" min="0" max="10" data-price="3"></span>
               </div>
+
+              <div class="order-option" id="order-option">
+                <h3 class="orders-sub-header">Delivery or Collection</h3>
+                    <select class="choose-input" id="option-select"> 
+                            <option value="0" disabled selected>Choose an option...</option>
+                            <option value="Delivery">Delivery £2 extra</option>
+                            <option value="Collection">Collection</option>
+                            
+                    </select>
+            </div>
             
              <div class="finished-transaction" id="finished-transaction">
-             <button class="btn" id="add-to-basket">Basket</button>
+             <button class="btn" id="basket-button">Basket</button>
              <button class="btn" id="checkout-button">Checkout</button>
             </div>
         </div>     

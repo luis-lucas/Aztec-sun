@@ -19,7 +19,7 @@ const cheeseCheck= document.getElementById ("cheese")
 const beansCheck= document.getElementById ("beans")
 const souredCreamCheck= document.getElementById ("soured-cream")
 const lettuceCheck= document.getElementById ("lettuce")
-const addToBasket= document.getElementById ("add-to-basket")
+const basketButton= document.getElementById ("basket-button")
 const tortillaChips= document.getElementById ("tortilla-chips")
 const tortillaChipsSalsa= document.getElementById ("tortilla-chips-salsa")
 const tortillaChipsGuacamole= document.getElementById ("tortilla-chips-guacamole")
@@ -37,10 +37,13 @@ const jarritoLemonLime= document.getElementById ("jarrito-lemon-lime")
 const jarritoGrapefruit= document.getElementById ("jarrito-grapefruit")
 const jarritoGuava= document.getElementById ("jarrito-guava")
 const drinks= document.getElementById ("drinks")
+const optionSelect= document.getElementById ("option-select")
 const checkoutBtn= document.getElementById("checkout-button")
 const extras= []
 //add price to burritos on the  choose style//
 const burritosOrder= []
+let totalOrder= {} 
+let totalExtras;
 
 addBurritoButton.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -126,21 +129,6 @@ const resetForm= ()=> {
     burritosQuantity.value= 1
 } 
 
-addToBasket.addEventListener("click",(e)=>{
-    e.preventDefault()
-    const drinksInput= drinks.querySelectorAll('input[type="number"]')
-    const totalDrinks=[]
-    for(const drink of drinksInput){
-        if(parseInt(drink.value)!==0 && drink.value !== ""){
-            const name= drink.name;
-            const price= drink.dataset.price;
-            const quantity= drink.value;
-            totalDrinks.push({name,price,quantity})
-        }
-    } 
-    console.log(totalDrinks)
-
-})
 
 const extrasOnTheSide= ()=> {
 let extrasChoice = document.querySelectorAll(".extras")
@@ -155,7 +143,7 @@ extrasChoice.forEach(extra=>{
     extras.push(extrasObj)
     }
 })
-const totalExtras= extras.reduce((acc,obj)=>acc+obj.totalPrice,0)
+totalExtras= extras.reduce((acc,obj)=>acc+obj.totalPrice,0)
 extras.push({totalExtras})
 console.log(extras)
 return extras
@@ -168,8 +156,35 @@ console.log(totalBurritos)
 return totalBurritos
 }
 
+const createOrder= ()=> {
+    const orderId= Math.floor(Math.random()*9000)+1000
+    const orderDate= new Date().toLocaleString()
+   let delivery=0
+   let service
+    if(optionSelect.value==="Delivery"){
+        service= "delivery"
+        delivery=2
+      }
+      else{service="collection"
+      delivery=0}
+
+
+totalOrder= {burritosOrder, 
+    extras, 
+    totalBurritos, 
+    totalExtras, 
+    total:totalBurritos + totalExtras + delivery,
+    orderId, 
+    orderDate, service, deliveryCharge:delivery}  
+console.log (totalOrder)
+}
+
 checkoutBtn.addEventListener("click",(e)=>{
     e.preventDefault()
+    if(optionSelect.value !=0){
     extrasOnTheSide()
     calcBurritosOrder()
+    createOrder()
+    }
+    else{alert("Choose delivery or collection")}
 })
