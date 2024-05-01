@@ -59,6 +59,9 @@
     > #nav-check {
       display: none;
     }
+    .items-basket {
+      color: $yellow;
+    }
   
     @media (max-width: 600px) {
       > .nav-btn {
@@ -117,6 +120,9 @@
         height: calc(100vh - 50px);
         overflow-y: auto;
       }
+    }
+    .items-basket {
+      color: $yellow;
     }
   }
   
@@ -206,7 +212,6 @@ margin: 20px;
 
    }   
 }
-
 
 .orders-sub-header {
     color: $orange;
@@ -327,6 +332,6 @@ margin: 20px;
           .extras-name {
             font-size: 38px;
           }
-           
+        
          
 }

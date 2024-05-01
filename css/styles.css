@@ -66,6 +66,9 @@ body .chango-regular {
 .nav > #nav-check {
   display: none;
 }
+.nav .items-basket {
+  color: #fff600;
+}
 @media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
@@ -114,6 +117,9 @@ body .chango-regular {
     height: calc(100vh - 50px);
     overflow-y: auto;
   }
+}
+.nav .items-basket {
+  color: #fff600;
 }
 
 .fillings {
@@ -400,12 +406,12 @@ body .chango-regular {
 }
 
 .card-container {
-  height: 400px;
+  height: 100%;
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/gray codex.png");
-  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.671)), url("/img/square codex.png");
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -420,14 +426,20 @@ body .chango-regular {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #f28123;
+  height: 80%;
   text-shadow: 1px 1px 0.5px rgba(159, 187, 204, 0.6);
+}
+.hero-text h1 {
+  font-size: 45px;
+}
+.hero-text h2 {
+  font-size: 37px;
+}
+.hero-text h3 {
+  font-size: 24px;
 }
 .hero-text p {
   font-size: 20px;
-}
-
-.mono {
-  height: 100px;
 }
 
 .main-nav {

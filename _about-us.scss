@@ -34,14 +34,14 @@ list-style: none;
 }
 
 .card-container {
-    height: 400px;
+    height: 100%;
    
    
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/gray\ codex.png");
-    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.671)), url("/img/square\ codex.png");
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,11 +55,20 @@ list-style: none;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $orange;
+    height: 80%;
     text-shadow: 1px 1px 0.5px rgba(159,187,204,0.6);
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 37px;
+    }
+    h3 {
+        font-size: 24px;
+        
+    }
     p {
         font-size: 20px;  
     }
   }
-  .mono {
-    height: 100px;
-}
+  
